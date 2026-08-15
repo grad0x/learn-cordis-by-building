@@ -9,11 +9,10 @@
 * Basic Plugin Runtime
 * Effect lifecycle management
 * Service dependency management
+* Plugin Context hierarchy
 
 Effect 用于管理 Plugin 创建的副作用，并在 Context dispose 时执行清理。
 
 Service 用于插件之间共享能力，Plugin 通过声明依赖实现解耦。
 
-后续计划：
-
-* Context hierarchy
+每个 Plugin 在独立 Context 中运行，从而拥有独立生命周期和资源边界。
